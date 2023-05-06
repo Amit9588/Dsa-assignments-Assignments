@@ -2,26 +2,26 @@
 
 # Q.1 
 
-# def heapify(arr, n, i):
-#     smallest = i
-#     left = 2 * i + 1
-#     right = 2 * i + 2
+def heapify(arr, n, i):
+    smallest = i
+    left = 2 * i + 1
+    right = 2 * i + 2
   
-#     if left < n and arr[left] < arr[smallest]:
-#         smallest = left
+    if left < n and arr[left] < arr[smallest]:
+        smallest = left
   
-#     if right < n and arr[right] < arr[smallest]:
-#         smallest = right
+    if right < n and arr[right] < arr[smallest]:
+        smallest = right
   
-#     if smallest != i:
-#         arr[i], arr[smallest] = arr[smallest], arr[i]
-#         heapify(arr, n, smallest)
+    if smallest != i:
+        arr[i], arr[smallest] = arr[smallest], arr[i]
+        heapify(arr, n, smallest)
   
-# def buildHeap(arr, n):
-#     start_idx = n // 2 - 1
-#     for i in range(start_idx, -1, -1):
-#         heapify(arr, n, i)
-#     return arr
+def buildHeap(arr, n):
+    start_idx = n // 2 - 1
+    for i in range(start_idx, -1, -1):
+        heapify(arr, n, i)
+    return arr
 
 # Q.2  most frequent words
 import heapq
